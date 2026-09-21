@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guro Walle: nettsider</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <main class="page">
+
+            <!-- Hamburger -->
+            <button 
+                class="menu-button"
+                @click="menuOpen = true"
+            >
+                <img src="assets/hamburger.svg" alt="Åpne meny">
+            </button>
+
+
+            <!-- Innhold -->
+
+            <section class="projects">
+
+                <article class="project">
+
+                    <img 
+                        src="assets/nettsider/ohnim.png"
+                        alt="MINO / OHNIM nettside"
+                    >
+
+                    <div class="project-info">
+
+                        <h2>MINO / OHNIM</h2>
+
+                        <p>
+                            En nettside jeg lagde for å vise frem
+                            kunsten til en av mine favoritt kunstnere.
+                        </p>
+
+                        <a href="https://ohnim.netlify.app" target="_blank">
+                            Se nettside → https://ohnim.netlify.app
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project">
+
+                    <img 
+                        src="assets/nettsider/nameGenerator.png"
+                        alt="Random Name Generator"
+                    >
+
+                    <div class="project-info">
+
+                        <h2>Random Name Generator</h2>
+
+                        <p>
+                            En liten nettside som genererer
+                            tilfeldige navn.
+                        </p>
+
+                        <a href="https://namegeneratorforaliens.netlify.app" target="_blank">
+                            Se nettside → https://namegeneratorforaliens.netlify.app
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img 
+                    class="logo"
+                    src="assets/logo.svg"
+                    alt="Guro Walle"
+                >
+            </a>
+
+        </main>
+
+
+        <!-- MENU -->
+
+        <div 
+            v-if="menuOpen"
+            class="menu-overlay"
+        >
+
+            <button 
+                class="close-button"
+                @click="menuOpen = false"
+            >
+                <img src="assets/lukke.svg" alt="Close button">
+            </button>
+
+            <nav class="menu">
+
+                <a href="nettsider.html">
+                    Nettsider
+                </a>
+
+                <a href="apper.html">
+                    Apper
+                </a>
+
+                <a href="kunst.html">
+                    Kunst
+                </a>
+
+                <a href="kontakt.html">
+                    Kontakt
+                </a>
+
+                <a href="index.html">
+                    Forside
+                </a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+
+        Vue.createApp({
+
+            data() {
+                return {
+                    menuOpen: false
+                }
+            }
+
+        }).mount('#app')
+
+    </script>
+
+</body>
+
+</html>
