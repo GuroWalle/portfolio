@@ -75,10 +75,17 @@ body {
 .logo {
     position: fixed;
 
-    right: 2rem;
-    top: 0.5rem;
+    right: 1.5rem;
+    top: 50%;
+
+    width: 7.1rem;
+    height: auto;
+
+    transform: translateY(-50%);
 
     z-index: 101;
+
+    padding: 1rem;
 }
 
 

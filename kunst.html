@@ -108,18 +108,14 @@
 
 
         <!-- MENU -->
-
         <div 
             v-if="menuOpen"
             class="menu-overlay"
         >
 
-            <button 
-                class="close-button"
-                @click="menuOpen = false"
-            >
+            <a href="index.html" class="close-button">
                 <img src="assets/lukke.svg" alt="Close button">
-            </button>
+            </a>
 
             <nav class="menu">
 
@@ -139,10 +135,6 @@
                     Kontakt
                 </a>
 
-                <a href="index.html">
-                    Forside
-                </a>
-
             </nav>
 
         </div>
@@ -150,6 +142,7 @@
     </div>
 
 
+    <!-- Vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script>
